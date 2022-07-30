@@ -2,9 +2,12 @@ package guru.springframework.msscbrewery.web.service.V2;
 
 import java.util.UUID;
 
+import org.springframework.stereotype.Service;
+
 import guru.springframework.msscbrewery.web.model.v2.BeerDtoV2;
 import guru.springframework.msscbrewery.web.model.v2.BeerStyleEnum;
 
+@Service
 public class BeerServiceV2Impl implements BeerServiceV2 {
 
 	@Override

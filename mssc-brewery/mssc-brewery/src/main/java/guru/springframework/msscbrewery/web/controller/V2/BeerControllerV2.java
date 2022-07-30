@@ -40,7 +40,7 @@ public class BeerControllerV2 {
 	
 	@PostMapping
 	public ResponseEntity handlePost(BeerDtoV2 beerDtoV2) {
-		BeerDto saveDto = beerServiceV2.saveNewBeer(beerDtoV2);
+		BeerDtoV2 saveDto = beerServiceV2.saveNewBeer(beerDtoV2);
 		
 		HttpHeaders headers = new HttpHeaders();
 		headers.add("location", "api/v2/beer/" + saveDto.getId().toString());
@@ -52,7 +52,7 @@ public class BeerControllerV2 {
 	public ResponseEntity handleUpdate(
 			@PathVariable("beerID") UUID id, 
 			@RequestBody BeerDtoV2 beerDtoV2) {
-		BeerDto saveDto = beerServiceV2.updateBeer(beerDtoV2);
+		BeerDtoV2 saveDto = beerServiceV2.updateBeer(beerDtoV2);
 		return new ResponseEntity(HttpStatus.NO_CONTENT);
 	}
 	
