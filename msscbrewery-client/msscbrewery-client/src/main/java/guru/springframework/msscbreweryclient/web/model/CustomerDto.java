@@ -1,15 +1,10 @@
-package guru.springframework.msscbrewery.web.model;
+package guru.springframework.msscbreweryclient.web.model;
 
 import java.util.UUID;
-
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 
 public class CustomerDto {
 	
 	private UUID id;
-	@NotBlank
-	@Size(min = 3, max = 100)
 	private String name;
 	
 	public CustomerDto() {}

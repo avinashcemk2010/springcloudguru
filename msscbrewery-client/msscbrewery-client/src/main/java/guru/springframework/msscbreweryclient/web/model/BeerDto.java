@@ -1,20 +1,12 @@
-package guru.springframework.msscbrewery.web.model;
+package guru.springframework.msscbreweryclient.web.model;
 
 import java.util.UUID;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Null;
-import javax.validation.constraints.Positive;
-
 public class BeerDto {
 	
-	@Null
 	private UUID id;
-	@NotBlank
 	private String beername;
-	@NotBlank
 	private String beerStyle;
-	@Positive
 	private Long upc;
 	
 	public BeerDto() {}
